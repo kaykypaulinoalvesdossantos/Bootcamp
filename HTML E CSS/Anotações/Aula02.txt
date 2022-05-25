@@ -1,0 +1,34 @@
+<section>
+
+Uma sesão para conteúdo
+
+</section>
+
+<header>
+
+Cabeçalho da pagina ou de parte da pagina
+
+</header>
+
+<article>
+
+Conteudo relevante na sua pagina 
+
+</article>
+
+<aside>
+
+Conteudo relacionado ao conteudo principal da pagina
+
+</aside>
+
+<footer>
+
+rodapé da pagina ou parte de um pagina
+
+</footer>
+
+<h1> ate o <h6>
+
+do h1 ao h6 e a iportancia do titulo da pagina
+

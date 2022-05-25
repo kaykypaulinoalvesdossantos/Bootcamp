@@ -1,0 +1,16 @@
+ID X Classe
+
+<header id="header" class="header"></header>
+<header class="header"></header>
+
+Classe 
+
+.header{
+    padding: 10px;
+}
+
+ID
+
+#header{
+    padding: 10px;
+}

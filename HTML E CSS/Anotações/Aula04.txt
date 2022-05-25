@@ -1,0 +1,6 @@
+<img>
+
+o img e uma tag sem fechamento ela carega algumas informaçoes como src"caminho da imagem" ou alt"mostra a discrição da imagem quando ela não carrega"
+
+<img src"img01.png">
+<img alt"logo">

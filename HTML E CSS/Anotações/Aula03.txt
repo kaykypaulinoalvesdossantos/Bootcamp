@@ -1,0 +1,16 @@
+<h1> Título da página </h1>
+
+<h2> Titulo de seção </h2>
+
+<h3> Titulo de artigo </h3>
+
+<p>Conteúdo do artigo.</p>
+
+o <p> ele representa um paragrafo mais ele não suporta somente texto podemos colocar vairios tipos de itens dentro desse paragrafo como video, icone , fotos , etc.
+
+
+<a>Link</a>
+
+<a href="Link para onde ele vai estar enviando"></a>
+
+<a target="_blank"></a> blank usado para o link abrir em uma nova guia
