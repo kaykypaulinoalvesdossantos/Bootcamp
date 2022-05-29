@@ -1,0 +1,167 @@
+----------------- if ---------------
+Podemos usar as palavras reservadas "if" para estabelecer uma condição:
+
+Ex.: var jogador1 = 0;
+     var jogador2 = 0;
+     
+     if(jogador1 > 0){
+         console.log('jogador 1 marcou ponto');
+     }
+
+como ler: se o jogador1 tiver valor maior que 0 ele mercou ponto
+
+----------------- Else ---------------
+
+No caso de a condição não ser atendida podemos usar o "else":
+
+Ex.: var jogador1 = 1;
+     var jogador2 = 0;
+
+     if(jogador1 > 0){
+         cosole.log('jogador1 marcou ponto');
+     }else{
+         console.log('ninguem marcou ponto');
+     }
+
+----------------- Else if ---------------
+
+Caso haja mais de uma condição usamos o "else if"
+
+Ex.: var jogador1 = 0;
+     var jogador2 = 0;
+
+     if(jogador1 > 0){
+         console.log('jogador1 marcou ponto')
+     }else if(jogador2 > 0){
+         cosole.log('jogador2 marcou ponto');
+     }else {
+         console.log('ninguém marcou ponto')
+     }
+
+----------------- ninho de if ---------------
+
+Podemos também usar o "if" dentro de um outro "if", chamamos isso de aninhamento de if´s ou ninho de if´s
+
+Ex.:
+    if(jogador1 = -1){
+        if (jogador1 > 0){
+            console.log('jogador1 marcou ponto');
+        }else{
+            cosole.log('ninguém marcou ponto');
+        }
+    }else{
+        console.log('jogador inválido');
+    }
+
+
+----------------- if ternário ---------------
+
+Podemos também fazer uma verificação em uma unica linha usando "if" ternario:
+
+Ex.: [condição] ? [instrução1] : [instrução2];
+
+jogador1 > 0 ? console.log('marcou ponto') : console.log('não marcou ponto')
+
+lembre de usar interogação "?" e dois pontos ":"
+
+
+----------------- Usando switch/case ---------------
+
+O "switch/case" funciona como uma estrutura condicional tambem
+
+Ex.: switch(${expressao}){
+    case 1:
+        ${instrução};
+    break;
+    case2:
+        ${instrução}
+    break;
+}
+
+----------------- Laços de repetição ---------------
+
+São estuturas condicionais que repetem uma instrução ate atingir determinado condição 
+
+- For;
+- For/in;
+- For/of;
+- While;
+- Do/While;
+
+
+----------------- For ---------------
+
+Funciona como uma repetição de instrução até que a condição seja falsa:
+
+    for([expressaolinicial]; [condicao], [incremento]){
+        declaracao
+    }
+
+Ex.: var array = ['valor1', 'valor2', 'valor3', 'valor4']
+
+    for (let i= ; i < array.lengt; i++){
+
+    }
+
+----------------- For/in ---------------
+
+Funciona como uma repetição a partir de uma propriedade;
+
+for([indice] in [objeto ou array]){
+    declaracao
+}
+
+Ex. var array = ['valor1', 'valor2', 'valor3', 'valor4'];
+    for (i in array){
+        cosole.log(i)
+    }
+
+
+----------------- For/of ---------------
+
+Funciona como uma repetição a partir de um valor 
+
+for([indice] of [array]){
+    declaracao
+}
+
+Ex.: var array = ['valor1','valor2','valor3','valor4'];
+
+    for(i of array){
+        console.log(i)
+    }
+
+
+O For/of não funciona com objetos pois as propriedades variam, diferentes do indice em um array que sempre serão números inteiros
+
+mas e se eu quiser pegar o valor mesmo assim ?
+
+Ex.: for (i of object.propriedade){
+    console.log(i)
+}
+
+porem cada caractere dentro do valor sera impresso em linhas sepradas
+
+
+----------------- While ---------------
+Executa uma instrução "enquanto" determinada condição for verdadeiro, a verificação é feita antes da execução 
+
+Ex,: var a = 0
+    While (a < 10){
+        a++ console.log(a)
+    }
+
+
+Como ler: enquanto a variavel a for a mesmoa que um 
+
+----------------- Do/While ---------------
+
+Excuta uma instrução "ate que" determinada condição seja falsa, a varificação e feitadoipos da execução
+
+Ex.:
+    var a = 9
+    do {
+        a++;
+        cosole.log('bom ')
+    }
+

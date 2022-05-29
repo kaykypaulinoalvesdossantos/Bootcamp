@@ -1,0 +1,65 @@
+(var) escopo global e local, pode ter seu valor alterado, se não tiver um valor inicial será tratada como null
+
+(let) escopo logal de bloco, pode ter seu valor alterado, se não tiver um valor inicial sera tratada como null
+
+
+(cont) escopo logal de bloco, somente leitura, o valor iniciado obrigatorio e não pode ser alterado
+
+
+
+
+------------ escopo ----------
+
+o escopo em JavaScript define a limitação e visibilidade de um bloco de código
+
+Escopo global - quando a variável é declarada fora de qual bloco, sua visibilidade fica disponível em todo o código
+
+Escopo local - quando a varíavel é declarada dentro de um bloco sua visibilidade pode ficar disponível ou não 
+
+
+-------------- Regras de uso de variáveis ------------
+
+iniciar como letras, underscore _ ou crifrão $; Não iniciar com número.
+    Ex.: var 1nome - Errado 
+    var nome || var _nome - Certo
+
+Não usar espaços (use o camelCase ou _)
+    Ex.: var nome completo - Errado 
+    var nomeCompleto || var nome_completo
+
+Não usar palavras reservadas
+    Ex.: var function - Errado
+
+Declarar variáveis no topo do bloco de código 
+
+---------------- Atribuição ----------------
+
+o sinal de igualdade " = " em JavaScript, siginifica Atribuição
+
+Ex : 
+
+        como declarar : var nome = "meu nome";
+        como ler : variável nome recebe o valor meunome;
+
+---------------- Comparação ----------------
+
+Para fazermos uma comparação de valores em JavaScript usamos " == "
+
+Ex.: 
+        como declarar : "0" == 0;
+        como ler: "0" tem o valor igual a 0?
+        
+        retorna um valor booleano
+
+
+---------------- Comparação idêntica -----------
+
+Para fazermos uma comparação de valores e tipos em JavaScript usamor " === " 
+
+Ex.: 
+        como declarar : "0" === 0;
+        como ler : "0" tem o valor e o tipo idêntico a 0?
+
+        retorna um valor booleano
+
+-------------------

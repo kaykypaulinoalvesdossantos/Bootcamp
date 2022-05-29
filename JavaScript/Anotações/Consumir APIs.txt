@@ -1,0 +1,66 @@
+----------------- O que são APIs ---------------
+
+Application Programming Interface
+
+Uma API é uma forma de intermediar os resultados do back-end com o que é apresentado no front-end. 
+
+Você consegue acessá-la por meio de URLs.
+
+
+----------------- JSON ---------------
+
+JSON : JavaScript Object Notation
+
+É muito comum que APIs retornem seus dados no formato .json, portanto precisamos tratar esse dados quando os recebermos
+
+aquivo .json :
+
+{
+    "description": "schema POST bank",
+    "type" : "object",
+    "properties" : {
+        "id": {
+            "type": "number",
+            "minimum": 0
+        },
+        "code":{
+            "type": "string"
+        },
+        "name":{
+            "type" : "string"
+        }
+    }
+}
+
+----------------- Fetch ---------------
+
+Consumindo APIs
+
+fetch(url, options)
+    .then(response => response.json())
+    .then(json => console.log(json))
+
+// retona uma Promise
+
+
+Operações no banco (POST, GET, PUT, DELETE, etc)
+
+fetch('https://endereco-api.com/',{
+    method:'GET',
+    cache: 'no-cache',
+})
+    .then(response => response.json())
+    .then(json => console.log(json))
+
+// retorna uma Promise
+
+
+fetch('https://endereco-api.com/',{
+    method:'POST',
+    cache: 'no-cache',
+    body: JSON.stringify(data)
+})
+    .then(response => response.json())
+    .then(json => console.log(json))
+
+// retorna uma Promise

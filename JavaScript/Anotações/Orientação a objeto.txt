@@ -1,0 +1,120 @@
+----------------- Paradigmas ---------------
+
+function paradigmas(){
+    if(Imperative){
+        const procedural();
+        const objectOriented();
+        conts parallelProcessing();
+    }
+    
+    else if(Declarative){
+        const logic();
+        const functionl();
+        const dataflow();
+        const database();
+    }
+}
+
+Os programas são "Objetos" que possuem uma série de propriedades.
+
+Pilares:
+    - Herança
+    - Polimorfismo
+    - Encapsulamento
+    - Abstração
+
+----------------- Pilares ---------------
+
+-= Abstração =-
+
+"Processo mental que consiste em isolar um aspecto determinando de um estado de coisa relativamente complexo, a fim de simplificar a sua avaliação, classificação ou para permitir a comunicação do mesmo"
+
+-= Herança =-
+
+"Obejeto filho herda propriedades e métodos do obejto pai" 
+
+
+-= Encapsulamento =-
+
+Cada classe tem propriedades e métodos independentes do restante do código
+
+class {
+    data members
+    methods(behavior)
+}
+
+-= Polimorfismo =-
+
+Objetos podem herdar a mesma classe pai, mas se comportarem de forma diferente quando invocamos seus métodos
+
+
+----------------- Protótipos ---------------
+
+Todos os objetos JavaScript herdam propriedades e métodos de um prototype.
+O objeto Object.prototype está no topo desta cadeia
+
+
+----------------- Classes ---------------
+
+Syntatic sugar: uma sintaxe feita para facilitar a escrita
+
+maneira Old (
+    var Meal = function(food){
+    this.food = food
+}
+
+Meal.prototype.eat = function(){
+    return "comida";
+}
+)
+
+maneira New (class Meal {
+    constructor (food){
+        this.food = food;
+    }
+
+    eat(){
+        return "comida";
+    }
+}
+)
+
+JavaScript não possui Classes nativamente. todas as classes são objetos e a herança se dá por prototype
+
+
+class Animal{
+    construturo (type = 'animal'){
+        this.type = type
+    }
+
+    get type(){
+        return this._type
+    }
+
+    set type(val){
+        this._type = val.toUpperCase()
+    }
+
+    makeSound(){
+        console.log('Making animal sound')
+    }
+}
+
+let a = new animal()
+console.log(a.type)
+
+
+class Cat extends animal{
+    constructor(){
+        super('cat')
+    }
+
+    makeSound(){
+        super.makeSound()
+        console.log('Meow!')
+    }
+}
+
+let b = new cat()
+
+console.log(b.type)

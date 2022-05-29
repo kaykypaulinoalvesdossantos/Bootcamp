@@ -1,0 +1,107 @@
+----------------- ECMAScript Error ---------------
+
+Erros que ocorrem em tempo de execução 
+
+Composto por:
+
+- mensagem 
+
+- nome
+
+- linha 
+
+- call Stack
+
+
+----------------- DOMException ---------------
+
+Error relacionados ao Documents Object Model (dom)
+
+
+----------------- Throw ---------------
+
+retorna uma string como validação de erro
+
+function verificaPalindromo(string){
+    if(!string) return "String inválida";
+
+    return string === string.split('').reverse().join('');
+}
+
+verificaPalindromo('cat');
+
+===============================================
+
+retorna um erro no console mostrando que a string esta invalida
+
+
+function verificaPalindromo(string){
+    if(!string) throw "String inválida";
+
+    return string === string.split('').reverse().join('');
+}
+
+verificaPalindromo('cat');
+
+
+----------------- Try ... catch ---------------
+
+function verificaPalindromo(string){
+    if(!string) throw "String invalida";
+
+    return string === string.split('').reverse().join('');
+}
+
+function tryCatchExemplo(string){
+
+    // Dentro do bloco Try você vai verifica um pedaso de codigo  e se esse pedaso de codigo tiver algum tipo de erro ele vai ser capiturado na função catch
+
+    try{
+        verificaPalindromo(string)
+    }
+
+    // e você pode manipular dentro de catch esse erro da maneira que você preferir
+
+    catch(e){
+        console.log(e); ou throw e;// console para aparecer como uma string e throw para aparecer como um erro 
+    }
+} 
+
+tryCatchExemplo('');
+
+
+----------------- Finally ---------------
+
+
+function verificaPalindromo(string){
+    if(!string) throw "String invalida";
+
+    return string === string.split('').reverse().join('');
+}
+
+function tryCatchExemplo(string){
+
+    try{
+        verificaPalindromo(string)
+    }
+
+    catch(e){
+        console.log(e); ou throw e;// console para aparecer como uma string e throw para aparecer como um erro 
+    }
+    finally{ // codigo que vai exercutar depois da verifica indepente do resultado
+        console.log('A string foi : ' + string);
+    }
+} 
+
+tryCatchExemplo('');
+
+
+----------------- O Objeto Error ---------------
+
+new Error(message, fileName, lineNumber);
+
+// todos os parâmetros são opcionais
+
+const MeuErro = new Error('mensagem Inválida');
+
+throw MeuErro;

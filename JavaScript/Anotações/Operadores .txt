@@ -1,0 +1,59 @@
+----------------- Operadores aritméticos ---------------
+
+São tipos de operadores metematicos com valor numérico:
+
++ adição
+
+- subtração 
+
+* multiplicação 
+
+/ divisão real 
+
+% divisão inteira
+
+** potenciação
+
+++ incrementar
+
+-- decrementar 
+
+----------------- Operadores de comparação ---------------
+
+> maior que
+ 
+< menor que
+
+>= maior ou igual a 
+
+<= menor ou igual a 
+
+== igual a
+
+=== mesmo valor e mesmo tipo
+
+!= diferente
+
+!== valor e tipos diferente
+
+
+----------------- Operadores lógicos ---------------
+
+&& - "e" - considera que todos os valores sejam verdadeiro
+
+|| - "ou" - considera que qualquer valor seja verdadeiro
+
+! -  "não" - inverte o valor de verdadeiro para falso ou vice-versa
+
+
+----------------- Operadores de Atribuição ---------------
+
+=  - Ex.: x =  y - Equivalente a : x = y
+
++= - Ex.: x += y - Equivalente a : x = x + y
+
+*= - Ex.: x *= y - Equivalente a : x = x * y
+
+/= - Ex.: x /= y - Equivalente a : x = x / y
+
+%= - Ex.: x %= y - Equivalente a : x = x % y

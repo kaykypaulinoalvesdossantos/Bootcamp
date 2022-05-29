@@ -1,0 +1,118 @@
+----------------- Vetores ou arrays ---------------
+
+Arrays são um tipo de lista, ou matriz de variável, onde cada variável possui um índice. Os valores podem ser de vários tipos.
+
+imagina que um array é uma caixa com váris outras caixa dentro e cada um contendo algum valor
+
+Ex.: let array = ['string',1,true]
+
+----------------- Array ---------------
+
+o array deve ser declarado entre colchetes "[]", e podem guardar qualquer valor dentro de seus índices: inclusive outros arrays
+
+Ex.: let array = ['string',1,true,false,['array1'],['array2']...]
+
+Obs.: O índice só é acessado por um número inteiro, onde 0 é o primeiro indice.Cada índice é separado por vírgula
+
+
+----------------- Manipulando arrays ---------------
+
+Ao ser declarado, o array traz consigo uma série de métodos para manipulá-lo
+
+forEach() - itera um array;
+push() - add item no final do array;
+pop() - remove item no final do array;
+shift() - remove item no iicio do array;
+unshift() - add item no inicio do arrya;
+indexOf() - retorna o indice de um valor;
+splice() - remove ou substitui um item pelo índice;
+slice() - retorna uma parte de um array existente;
+
+----------------- Objetos ---------------
+
+Dados que possuem propriedades e valores que definem suas características.Deve ser declarado entre "{}"
+
+Ex.: imagine uma xícara azul. Ela tem cor, pode ter varios tamanhos e funções(quero caféééé). pode ser declarada assim:
+
+    var xicara ={
+            cor: 'azul',
+            tamanho: 'p',
+            funcao: tomarCafe()
+    }
+
+
+----------------- Manipulando Objetos ---------------
+
+As propriedades de objetos podem ser atribuídas á variáveis, facilitando a manipulação do objeto.Chamamos isso de desestruturação.
+
+Ex.: var xicara = {
+             cor: 'azul',
+            tamanho: 'p',
+            funcao: tomarCafe()
+     }
+
+     var cor = xicara.cor;
+     var tamanho = xicara.tamanho;
+     var funcao = tomarCafe()
+
+
+Outra forma de fazer a desestruturação é utlizando chaves ou declarar variável
+
+Ex.: var xicara = {cor:'azul', tamanho:'p', funcao:tomarCafe()}
+
+
+var {cor, tamanho, funcao} = xicara
+
+----------------- Arrays "Spread" ---------------
+
+Spread uma forma de lidar separadamente com elementos
+
+o que era parte de um array se torna um elemento independente
+
+function sum(x, y, z) {
+    return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers))
+
+----------------- Arrays "Rest" ---------------
+
+Rest : combina os argumentos em um Array
+
+o que era um elemento independente se torna parte de um array
+
+function confereTamanho(...args){
+    console.log(args.length)
+}
+
+confereTamanho()
+confereTamanho(1, 2) // 2
+confereTamanho(3, 4, 5) // 3
+
+
+----------------- Objeto "Destructuring" ---------------
+
+Entre chaves {}, podemos filtrar apenas os dados que nos interessam em um objeto
+
+const user = {
+    id: 42,
+    diplayName: 'jdoe';
+    fullName:{
+        firstName: 'john',
+        lastName: 'Doe'
+    }
+};
+
+function userId({id}){
+    return id;
+}
+
+function getFullName({fullName : {firstName : first, lastName: last}}){
+    return `${first} ${last}`
+}
+
+userId(user) // 42
+
+getFullName(user) // John Doe

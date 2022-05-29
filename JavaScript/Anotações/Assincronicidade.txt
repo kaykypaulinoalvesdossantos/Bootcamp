@@ -1,0 +1,91 @@
+----------------- Definição ---------------
+
+Assíncrono
+
+" que não ocorre ou não se efetiva ao mesmo tempo ".
+
+Synchronous
+
+Students engage in course activites at a specific date/time. everyone be online for a scheduled event
+
+Asynchronous
+
+Students engage in course activites at any time , contributing at their own pace
+
+
+o Javascript roda de maneira sícrona mais ele pode ser assincrono
+
+
+----------------- Promises ---------------
+
+Objeto de processamento assincrono 
+
+incialmente, seu valor é desconhecido. ele pode então, ser resolvida ou rejeitada
+
+
+Uma promise pode ter 3 estados 
+
+1) Pending 
+
+2) Fulfiled 
+
+3) Rejected
+
+
+Estrutura 
+
+const myPromise = new Promise((resolve, reject) => {
+    window.setTimeout(() => {
+        resolve(console.log('Resolvida));
+    }, 2000);
+});
+
+await myPromise
+    .then((result) => result + 'passando pelo then')
+    .then((result) => result + 'e agora acabou!')
+    .catch((err) => console.log(err.message))
+
+// Após 2 segundos, retorna o valor 
+// "Resolvida passando pelo then e agora acabou!"
+
+----------------- Async / await ---------------
+
+Funções assíncronas precisam dessa duas palavras chave
+
+async function resolvePromise(){
+    const myPromise = new Promise((resolve, reject) => {
+        window.setTimeout(() => {
+            resolve('Resolvida');
+        }, 3000);
+    });
+
+    const resolved = await myPromise
+        .then((result) => result + 'passando pelo then')
+        .then((result) => result + 'e agora acabou!')
+        .catch((err) => console.log(err.message))
+
+    result resolved;
+}
+
+
+Utilizando Try...catch
+
+async function resolvePromise(){
+    const myPromise = new Promise((resolve, reject) => {
+        window.setTimeout(() => {
+            resolve('Resolvida');
+        }, 3000);
+    });
+
+    let result;
+
+    try {
+        result = await myPromise
+            .then((result) => result + ' passando pelo then')
+            .then((result) => result + ' e agora acabou!')
+    }catch(err){
+        result = err.message;
+    }
+
+    return result;
+}

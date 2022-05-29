@@ -1,0 +1,16 @@
+Boolean = Verdadeiro (true) ou falso (false)
+
+null = vasio
+
+undefined = indefinido
+
+Number = numero
+
+String = texto
+
+Array = lista
+
+Object 
+
+Function
+

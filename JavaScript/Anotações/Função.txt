@@ -1,0 +1,173 @@
+----------------- Funções ---------------
+
+São blocos de comandos e instrução para a execução de determinadas tarefas:
+
+Ex.:function nomeDaFuncao(){
+        ${instrução};
+    }
+
+    nomeDaFuncao();
+
+
+----------------- Como declarar ? ---------------
+
+Geralmente se utiliza a palavra reservada "function" seguida de parêntese "()" e chaves "{}"
+
+Ex.: function funcao(){
+        console.log("mensagem");
+     }
+
+     funcao();
+
+    
+() - indica que e um objeto do tipo function
+{} - indica que e um bloco de instrução
+
+
+----------------- Funções com parâmetros ---------------
+
+As funções podem receber em sua declarção, parâmetros, que servem como variáveis, onde sua atribuição pode ser feita durante a chamada da função:
+
+Ex.: function nomeDaFuncao(parametro) {
+        ${instrucao}
+    }
+
+    nomeDaFuncao(valorDoParametro)
+
+
+----------------- Funções declarativas ---------------
+
+São funçoes que possuem o uso mais comum, deve ser delcarada usando a palavra reservada "function" seguida do nome da função, parêntese "()" chaves "{}"
+
+Ex.: function nomeDaFuncao(){
+        ${instrucao};
+    }
+
+o nome da função e obrigatorio
+
+
+----------------- Expressões de Funções ---------------
+
+São funções atribuídas á expressões. A nomeação das funções por expressão é opcional
+
+Ex.: 1: var funcao = function nomeDaFuncao(){
+            ${instrucao};
+        }
+
+Ex.: 2: var funcao = function(){
+            ${instrucao};
+        }
+
+----------------- Arrow Function ---------------
+
+São funções de expressão de sintaxe curta. Arrow function sempre serão anônimas, e portanto não podem ser nomeadas. deve ser declarada com parênteses "()", seguindo de "=>" e depois chaves "{}"
+
+Ex.: var funcao = () => {
+        ${instrucao}
+    }
+
+----------------- Funçoes Aritimeticas ---------------
+
+Number() - para comverter valores em números;
+Prompt() - para registrar entradas de usuário;
+Alert() - para mostrar mensagem ao usuário;
+Template Strings - para usar strings junto com expressões
+
+----------------- Função Anônima ---------------
+
+Funçoes que representam expressões
+
+uma variável pode armazenar uma função 
+
+const soma = function (a, b){
+    return a + b;
+}
+
+soma(1, 2) // 3
+soma(5, 4) // 9
+
+----------------- Função autoinvocavel ---------------
+
+IIFE (immediately invoked Function expression)
+
+uma função anônima entre parênteses, seguida por outro par de parênteses, que representa sua chamda.
+
+(
+    function(){
+        let name = "Digital Innovation One"
+        return name;
+    }
+)();
+
+Também pode ser utilizda com parâmetro ou armazenada em uma variável
+
+cont soma3 = (
+    function(){
+        return a + b;
+    }
+)(1, 2);
+
+console.log(soma3)
+
+----------------- Callbacks ---------------
+
+
+Uma função passada como argumento para outra
+
+ultilizando callbacks, você tem maior controle da ordem de chamdas
+
+const calc = function(operacao, num1, num2){
+    return operacao(num1, num2);
+}
+
+const soma = function(num1, num2){
+    return num1 + num2;
+}
+
+cont sub = function(num1, num2){
+    return num1 - num2;
+}
+
+const resultadoSoma = calc(soma, 1, 2);
+const resultadoSub = calc(sub, 1, 2);
+
+console.log(resultadoSub);
+console.log(resultadoSoma);
+
+----------------- Objeto "arguments" ---------------
+
+Um array com todos os parâmetros passados quando a função foi invocada
+
+function findMax(){
+    let max = -Infinity;
+
+    for(let i = 0; i < arguments.length; i++){
+        if(arguments [i] > max){
+            max = arguments[i];
+        }
+    }
+    
+    return max;
+}
+
+----------------- This: o que é ? ---------------
+
+A palavra reservada this é uma referência dde contexto. 
+
+no exemplo, this refere-se ao objeto pessoa
+
+const pessoa = {
+    firstName: "Andre",
+    lastName: "Soares",
+    id : 1,
+    fullName : function(){
+        return this.firstName + " " + this.lastName;
+    },
+    gatId: function(){
+        return this.id;
+    }
+};
+
+pessoa.fullName();
+
+pessoa.getId();
