@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "geradornumerosrandomicos",
+    "slug": "geradornumerosrandomicos",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

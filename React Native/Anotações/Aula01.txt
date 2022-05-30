@@ -1,0 +1,203 @@
+Quando iniciar o projeto a primeira coisa a ser feita apos a configuração e criar uma pasta (SRC) com o (App.js) dentro dessa pasta apagando em seguida o App.js que esta fora.
+
+Quando finalizar esse procedimento va em index.js e mude o diretorio do import App from './App' para import App from './src/App'
+
+inicialmente import o React e o React Native
+
+import React from 'react';
+import {} from 'react-native';
+
+apos isso crie uma Arrow Function App 
+
+const App = () => {
+    return null;
+};
+
+e exporte o padrão do App com 
+
+export default App;
+
+
+--------- View ---------
+
+Um componente do react native 
+como se fose uma div em HTML mais em react native chamamos de View . para utilizar ele precisamos importar  no react-native
+
+import {View} from 'react-native';
+
+utiliza como html mais inves de Div colocamos View
+
+<View>
+
+</View>
+
+--------- Text ---------
+
+import {View,Text} from 'react-native';
+
+
+o text e uma componente que e utilizado para rendenizar textos na tela para executalo abrimos e feichamos a teg dele
+
+<Text>Hello World</Text>
+
+---= com a implementação do View e do Text o codiog ficar assim =----
+
+import React from "react";
+import {View} from 'react-native';
+
+const App = () => {
+    return <View>
+        <Text>Hello World</Text>
+    </View>;
+}
+
+export default App;
+
+
+--------- StyleSheet ---------
+
+StyleSheet e uma folha de estilo usada para estilizar objetos da sua aplicação . para iniciar ela precisamos importar ela e criar a função dela 
+
+import {View,Text,StyleSheet} from 'react-native';
+
+e inciarmos ela com o 
+
+const style = StyleSheet.create({
+    // aqui colocaremos os objetos
+
+    container:{
+
+    },
+})
+
+
+colocaremos no componetes a propriedade de style que nessa propriedade vamos passar o StyleSheet com o objetos de estilo
+
+<View style={style.container}>
+
+</View>
+
+
+os estilos podemos colocar como se fosse um css mais utilizando objetos
+
+const style = StyleSheet.create({
+    // aqui colocaremos os objetos
+
+    container:{
+        backgroundColor: 'pink',
+        flax: 1, // expandir para a tela inteira
+    },
+})
+
+
+o react native utiliza o flaxbox por padrão
+
+
+todo componete de estilização e um objetos sempre que for colocar estilização so precisa criar um componete e aplicar a propriedade style no componete
+
+---= com a implementação do StyleSheet o codiog ficar assim =----
+
+import React from "react";
+import {View, Text, StyleSheet} from 'react-native';
+
+const App = () => {
+    return <View style={style.container}>
+        <Text style={style.text}>Hello World</Text>
+    </View>;
+}
+
+export default App;
+
+const style = StyleSheet.create({
+    container:{
+        backgroundColor:"pink",
+        flex: 1,
+    },
+
+    text:{
+        fontSize:50,
+        fontWeight: 'bold',
+        color:'black',
+    }
+})
+
+--------- SafeAreaView e StatusBar ---------
+
+são dois componetes para melhorar a usabilidade e evitar que algum componente va para um area indesejada 
+
+o SafeAreaView e para travar o componete na parte do View caso tenha um celular com note ele não invada a coisas indesejaveis ele pode ser usar como o container igual ao componente View mais o View não pode ser descartado o SafeAreaView e so um metodo de segurança 
+
+StatusBar e o componente que modifica a barra de estatuto do seu celular a barra que mostra notificaçoes ,bateria , internet, etc.
+
+como todo componete esse tambem precisa ser importado
+
+import {View, Text, StyleSheet, SafeAreaView, StatusBar} from 'react-native';
+
+
+---= com a implementação do SafeAreaView e StatusBar o codiog ficar assim =----
+
+import React from "react";
+import {View, Text, StyleSheet, SafeAreaView, StatusBar} from 'react-native';
+
+const App = () => {
+    return <SafeAreaView style={style.container}>
+        <StatusBar backgroundColor={'pink'} barStyle="dark-content"/>
+        <View>
+            <Text style={style.text}>Hello World</Text>
+        </View>;
+    </SafeAreaView>
+}
+
+export default App;
+
+const style = StyleSheet.create({
+    container:{
+        backgroundColor:"pink",
+        flex: 1,
+    },
+
+    text:{
+        fontSize:50,
+        fontWeight: 'bold',
+        color:'black',
+    }
+})
+
+--------- Image ---------
+
+um componete para importar imagens , ele tem tag de alto fechamento e recebe varios paramestro como todo componente ele precisa ser importado e ao iniciar ele precisa passar algumas propriedades
+
+import {Image} from 'react-native';
+
+<Image source={{uri: Url da imgem}}/>
+
+toda imagen obrigatoriamente precisa ser iniciada com a altura e legargura para ser exebida
+Linking
+
+--------- Linking ---------
+conponente usaod para abrir links 
+
+para o android aceitar o link presiamos entrar no codigo nativo do android no AndroidManifest.xml e adicionar alguma propriedades
+
+<queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:schame="https"/>
+        </intent>
+</queries>
+
+
+para colocar o link precisamos colocar uma constante asincrona 
+
+ const handlePressGoToGitgub = async () =>{
+      const res = await Linking.canOpenURL(url);
+      if(res){
+        await Linking.openURL(url);
+      }
+    }
+
+constante para quando precionar ele abrir o link 
+
+
+
